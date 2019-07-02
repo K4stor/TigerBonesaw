@@ -1,0 +1,45 @@
+body {
+  font-family: 'Oswald', Impact, Arial, sans-serif;
+  line-height: 1;
+  margin: 0;
+  background-color: black;
+}
+
+.about {
+    text-align: center
+}
+
+/* ---------------------------------- NAVBAD ----------------- */
+
+nav {
+  height: 40px;
+  background-color: #333;
+  width: 100%;
+  margin: 0;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+  display: flex;
+}
+
+ul.topnav li {
+  list-style: none;
+}
+
+ul.topnav li a {
+  font-size: 22px;
+  text-decoration: none;
+  padding: 14px;
+  color: white;
+}
+
+.topnav-left, .topnav-right {
+  width: 150px;
+  border: 1px solid blue;
+}
