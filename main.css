@@ -2,7 +2,8 @@ body {
   font-family: 'Oswald', Impact, Arial, sans-serif;
   line-height: 1;
   margin: 0;
-  background-color: black;
+  background-color: #191919;
+  color: white;
 }
 
 .about {
@@ -24,7 +25,6 @@ nav {
 nav ul {
   margin: 0;
   padding: 0;
-  border: 1px solid red;
   display: flex;
 }
 
@@ -41,5 +41,74 @@ ul.topnav li a {
 
 .topnav-left, .topnav-right {
   width: 150px;
-  border: 1px solid blue;
+}
+
+.info {
+  text-align: center;
+  max-width: 750px;
+}
+
+.band-image {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+}
+
+.band-image-container {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.gig-container {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.gig-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25px;
+  padding-top: 25px;
+}
+
+.gig-container hr {
+  border: solid  rgb(44, 44, 53) 1px;
+}
+
+.gig-container h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.gig-dates {
+  flex-basis: 100px;
+}
+
+.gig-title {
+  flex-grow: 1;
+
+}
+
+.gig-location {
+ flex-basis: 150px;
+}
+
+.gig-www {
+  flex-basis: 100px;
+  text-align: center;
+  padding: 10px; 
+  border: 1px solid white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+    padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+.section-spacer {
+  height: 150px;
 }
