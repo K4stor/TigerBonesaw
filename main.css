@@ -13,7 +13,7 @@ body {
 /* ---------------------------------- NAVBAD ----------------- */
 
 nav {
-  height: 40px;
+  height: 60px;
   background-color: #333;
   width: 100%;
   margin: 0;
@@ -41,6 +41,23 @@ ul.topnav li a {
 
 .topnav-left, .topnav-right {
   width: 150px;
+}
+
+.topnav-right i {
+  padding-left: 10px;
+}
+
+.topnav-right a {
+  color: white;
+  text-decoration: none;
+}
+
+.info-container {
+  display: flex;
+  justify-content: center;
+    padding-left: 50px;
+  padding-right: 50px;
+
 }
 
 .info {
@@ -99,14 +116,6 @@ ul.topnav li a {
   text-align: center;
   padding: 10px; 
   border: 1px solid white;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-    padding-left: 50px;
-  padding-right: 50px;
-
 }
 
 .section-spacer {
