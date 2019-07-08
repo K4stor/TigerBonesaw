@@ -121,3 +121,18 @@ ul.topnav li a {
 .section-spacer {
   height: 150px;
 }
+
+.player-container {
+  max-width: 100%;
+}
+
+.player {
+  margin: 0 auto;
+  display: block;
+}
+
+.top-spacer {
+  width: 100%;
+  height: 100vh;
+  margin-bottom: -60px;
+}
