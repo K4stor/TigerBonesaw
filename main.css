@@ -21,6 +21,13 @@ body {
   margin-bottom: -60px;
 }
 
+.top-spacer img {
+  padding-top: 3%;
+  height: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
 .nav-container {
   position: sticky;
   top: 0px;
