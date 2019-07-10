@@ -1,5 +1,3 @@
-console.log("arsch");
-
 var requestURL = './gigs.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
@@ -8,10 +6,7 @@ request.send();
 
 request.onload = function() {
   var gigs = request.response;
-  console.log(gigs);
   createGigElements(gigs);
-  // populateHeader(superHeroes);
-  // showHeroes(superHeroes);
 }
 
 function createGigElements(gigs) {
@@ -52,10 +47,3 @@ function createGigRow(gig, gigRootElement) {
   var hrElement = document.createElement('hr');
   gigRootElement.appendChild(hrElement);
 }
-
-{/* <div class="gig-row">
-<div class="gig-dates">12.01.2019</div>
-<div class="gig-title">Püttstock</div>
-<div class="gig-location">Beckum Roland</div>
-<div class="gig-www">Visit</div>
-</div> */}
