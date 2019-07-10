@@ -33,14 +33,19 @@ function createGigRow(gig, gigRootElement) {
   locationElement.className = "gig-location";
   locationElement.textContent = gig.location;
 
-  var linkElement = document.createElement('div');
-  linkElement.className = "gig-www";
+  var linkElement = document.createElement('a');
   linkElement.textContent = "Visit";
+  linkElement.href = gig.url;
+  linkElement.target = "_blank";
+
+  var linkButtonElement = document.createElement('div');
+  linkButtonElement.className = "gig-www";
+  linkButtonElement.appendChild(linkElement);
 
   gigRowElement.appendChild(dateElement);
   gigRowElement.appendChild(titleElement);
   gigRowElement.appendChild(locationElement);
-  gigRowElement.appendChild(linkElement);
+  gigRowElement.appendChild(linkButtonElement);
 
   gigRootElement.appendChild(gigRowElement);
 

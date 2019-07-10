@@ -125,7 +125,6 @@ ul.topnav li a {
 
 .gig-title {
   flex-grow: 1;
-
 }
 
 .gig-location {
@@ -137,6 +136,11 @@ ul.topnav li a {
   text-align: center;
   padding: 10px; 
   border: 1px solid white;
+}
+
+.gig-www a {
+  text-decoration: none;
+  color: white;
 }
 
 .section-spacer {
