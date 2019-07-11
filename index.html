@@ -3,21 +3,22 @@
 
 <head>
   <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
-  <link href="main.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <script src="js/smooth-scroll.polyfills.min.js"></script>
   <script src="https://kit.fontawesome.com/ad8e67bcb6.js"></script>
-  <script src="gigs.js"></script>
+  <script src="js/gigs.js"></script>
   <title>Tiger Bonesaw - official website</title>
 </head>
 
 <body>
   <div class="fullscreen-bg">
     <video autoplay muted loop id="myVideo" class="fullscreen-bg__video">
-      <source src="tbsPage.webm" type="video/webm">
+      <source src="video/tbsPage.webm" type="video/webm">
     </video>
   </div>
 
   <div class="top-spacer">
-    <img src="logo.png"> 
+    <img src="images/logo.png">
   </div>
 
   <div class="content">
@@ -28,7 +29,7 @@
           <li><a href="#about"> ABOUT </a></li>
           <li><a href="#music"> MUSIC </a></li>
           <li><a href="#video"> VIDEO </a></li>
-          <li><a href="#gigs"> GIGS </a></li>
+          <li><a href="#gigRoot"> GIGS </a></li>
         </ul>
         <div class="topnav-right">
           <a href="https://www.facebook.com/Tiger-Bonesaw-107460549314512/" target="_blank">
@@ -43,7 +44,7 @@
 
     <div class="section-spacer"></div>
 
-    <div class="info-container">
+    <div class="info-container" id="about">
       <div class="info">
         <h1>THE BAND</h1>
         <p>
@@ -69,7 +70,7 @@
     <div class="section-spacer"></div>
 
     <div class="band-image-container">
-      <img src="./band.jpg" class="band-image"> </img>
+      <img src="images/band.jpg" class="band-image"> </img>
     </div>
     <div class="section-spacer"></div>
 
@@ -79,11 +80,20 @@
 
     <div class="section-spacer"></div>
 
-    <div class="player-container">
+    <div class="player-container" id="music">
       <iframe class="player" src="https://open.spotify.com/embed/album/7IZ7FwuAQkM9V4PA0KwUzR" width="500" height="500"
         frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
   </div>
-</body>
 
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      offset: function (anchor, toggle) {
+        return 80;
+      },
+      easing: 'easeInOutCubic', // Easing pattern to use
+      speed: 300
+    });
+  </script>
+</body>
 </html>

@@ -1,4 +1,4 @@
-var requestURL = './gigs.json';
+var requestURL = '../json/gigs.json';
 var request = new XMLHttpRequest();
 request.open('GET', requestURL);
 request.responseType = 'json';
