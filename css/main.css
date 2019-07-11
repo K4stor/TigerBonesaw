@@ -156,6 +156,19 @@ ul.topnav li a {
   display: block;
 }
 
+.contact {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.contact a {
+  padding-top: 10px;
+  font-size: 15pt;
+  text-decoration: none;
+  color: white;
+}
+
 .fullscreen-bg {
   position: fixed;
   top: 0;
