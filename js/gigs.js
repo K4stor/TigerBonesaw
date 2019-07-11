@@ -22,7 +22,7 @@ function createGigRow(gig, gigRootElement) {
   gigRowElement.className = "gig-row";
 
   var dateElement = document.createElement('div');
-  dateElement.className = "gig-dates";
+  dateElement.className = "gig-date";
   dateElement.textContent = gig.date;
 
   var titleElement = document.createElement('div');
@@ -39,7 +39,7 @@ function createGigRow(gig, gigRootElement) {
   linkElement.target = "_blank";
 
   var linkButtonElement = document.createElement('div');
-  linkButtonElement.className = "gig-www";
+  linkButtonElement.className = "gig-link";
   linkButtonElement.appendChild(linkElement);
 
   gigRowElement.appendChild(dateElement);

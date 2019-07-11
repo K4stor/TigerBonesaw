@@ -49,6 +49,73 @@ nav ul {
   display: flex;
 }
 
+/* NAVIGATION */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+nav ul li {
+  display: inline-block;
+}
+nav ul li a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  /* color: #aaa; */
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: 0 10px;
+}
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all .5s;
+}
+
+/* stroke */
+nav.stroke ul li a,
+nav.fill ul li a {
+  position: relative;
+}
+nav.stroke ul li a:after,
+nav.fill ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: white;
+  height: 3px;
+}
+nav.stroke ul li a:hover:after {
+  width: 100%;
+}
+
+nav.fill ul li a {
+  transition: all 2s;
+}
+
+nav.fill ul li a:after {
+  text-align: left;
+  content: '.';
+  margin: 0;
+  opacity: 0;
+}
+nav.fill ul li a:hover {
+  color: #fff;
+  z-index: 1;
+}
+nav.fill ul li a:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
 ul.topnav li {
   list-style: none;
 }
@@ -71,6 +138,40 @@ ul.topnav li a {
 .topnav-right a {
   color: white;
   text-decoration: none;
+}
+
+.fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+      background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+      display: none;
+  }
 }
 
 .info-container {
@@ -119,7 +220,7 @@ ul.topnav li a {
   justify-content: center;
 }
 
-.gig-dates {
+.gig-date {
   flex-basis: 100px;
 }
 
@@ -131,14 +232,14 @@ ul.topnav li a {
  flex-basis: 150px;
 }
 
-.gig-www {
+.gig-link {
   flex-basis: 100px;
   text-align: center;
   padding: 10px; 
   border: 1px solid white;
 }
 
-.gig-www a {
+.gig-link a {
   text-decoration: none;
   color: white;
 }
@@ -167,38 +268,4 @@ ul.topnav li a {
   font-size: 15pt;
   text-decoration: none;
   color: white;
-}
-
-.fullscreen-bg {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  z-index: -100;
-}
-
-.fullscreen-bg__video {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: auto;
-  height: auto;
-  min-width: 100%;
-  min-height: 100%;
-  -webkit-transform: translate(-50%, -50%);
-     -moz-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-
-@media (max-width: 767px) {
-  .fullscreen-bg {
-      background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;
-  }
-
-  .fullscreen-bg__video {
-      display: none;
-  }
 }
