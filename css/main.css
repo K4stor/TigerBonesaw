@@ -167,7 +167,7 @@ ul.topnav li a {
 
 @media (max-width: 1080px) {
   .fullscreen-bg {
-      background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;
+      background: url('./img/band.jpg') center center / cover no-repeat;
   }
 
   .fullscreen-bg__video {
