@@ -167,7 +167,7 @@ ul.topnav li a {
 
 @media (max-width: 1080px) {
   .fullscreen-bg {
-      background: url('./images/band.jpg') center center / cover no-repeat;
+      background: url('../images/band.jpg') center center / cover no-repeat;
   }
 
   .fullscreen-bg__video {
