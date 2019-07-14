@@ -165,7 +165,7 @@ ul.topnav li a {
     transform: translate(-50%, -50%);
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1080px) {
   .fullscreen-bg {
       background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;
   }
