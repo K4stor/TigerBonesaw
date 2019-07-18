@@ -4,13 +4,13 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
-  <!-- <link href="css/reset.css" rel="stylesheet"> -->
   <link href="https://fonts.googleapis.com/css?family=Oswald:300&display=swap" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
 
   <script src="js/smooth-scroll.polyfills.min.js"></script>
   <script src="js/stickyfill.min.js"></script>
   <script src="js/gigs.js"></script>
+  <script src="js/player.js"></script>
   <title>Tiger Bonesaw - official website</title>
 </head>
 
@@ -87,9 +87,18 @@
 
     <div class="section-spacer"></div>
 
-    <div class="player-container" id="music">
-      <iframe class="player" src="https://open.spotify.com/embed/album/7IZ7FwuAQkM9V4PA0KwUzR" width="500" height="500"
-        frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <div class="music" id="music">
+      <h1>MUSIC</h1>
+
+      <ul id="playlist" class="playlist">
+        <li>
+          <div class="playlistItem">
+            <span class="playlistNumber">01</span>
+            <span class="playlistTitle">Song 2</span>
+            <span class="playlistLength">2:00</span>
+          </div>
+        </li>
+      </ul>
     </div>
 
     <div class="section-spacer"></div>

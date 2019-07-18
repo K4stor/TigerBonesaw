@@ -281,3 +281,36 @@ ul.topnav li a {
   text-decoration: none;
   color: white;
 }
+
+
+audio {
+  display:none;
+  }
+ 
+  .playlistItem {
+  }
+
+  .playlist {
+    margin: 0 auto;
+    width: 80%;
+    display: block;
+  }
+
+  .playlist li {
+    list-style: none;
+  }
+
+  .playlistTitle {
+    display: inline-block;
+    width: 80%;
+  }
+
+  .playlistNumber {
+    display: inline-block;
+    width: 25px;
+  }
+
+  .playlistLength {
+    float: right;
+  }
+
