@@ -314,3 +314,30 @@ audio {
     float: right;
   }
 
+.music h1 {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+}
+
+.playerHeader {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: red;
+  height: 80px;
+  max-width: 600px;
+}
+
+.playerHeader i {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.playerNowPlaying {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+}
+
