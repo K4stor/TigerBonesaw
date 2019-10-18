@@ -4,5 +4,11 @@
     "name" : "The Mean Scene",
     "length" : "2:15",
     "url" : "mp3/mean.mp3"
+  },
+  {
+    "number" : "02",
+    "name" : "Queen",
+    "length" : "4:02",
+    "url" : "mp3/queen.mp3"
   }
 ]

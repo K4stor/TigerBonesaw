@@ -1,3 +1,4 @@
+//var currentAudio;
 var tracksRequestURL = './json/songs.json';
 var tracksRequest = new XMLHttpRequest();
 tracksRequest.open('GET', tracksRequestURL);
@@ -24,6 +25,8 @@ function createPlaylist(tracks) {
       } else {
         audio.pause();
       }
+
+      audio.src = "./mp3/queen.mp3"
     }
     rootElement.appendChild(element);
   });
