@@ -6,7 +6,7 @@ function indexOf(element) {
 function configureAudioPlayer() {
     var currentSong = 0;
     let player = document.getElementById("audio");
-    let firstSong = document.getElementById('playlist').children[0].children[0].href;
+    let firstSong = document.querySelector("#playlist li a").href;
     player.src = firstSong;
     
     let songs = document.getElementById('playlist').children;

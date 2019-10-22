@@ -57,6 +57,12 @@ h1 {
   background: #191919;
 }
 
+.music {
+  margin: 0 auto;
+  max-width: 100%;
+  text-align: center;
+}
+
 /* ---------------------------------- NAVBAD ----------------- */
 .top-spacer {
   width: 100%;
@@ -260,11 +266,6 @@ ul.topnav li a {
   height: 150px;
 }
 
-.player-container {
-  max-width: 100%;
-}
-
-
 .contact {
   margin: 0 auto;
   max-width: 100%;
@@ -278,15 +279,39 @@ ul.topnav li a {
   color: white;
 }
 
+.playerContainer {
+    width: 80%;
+    display: flex;
+    margin: 0px auto;
+}
+
+.playerContainer img {
+    width: 50%;
+}
+
+.playlistContainer {
+    background: #111;
+    width: 50%;
+}
+
 #playlist {
+    font-size: 18px;
+    text-align: left;
     list-style: none;
+    margin-left: -40px;
+    margin-top: 0px;
+}
+
+#playlist li {
+    padding: 10px;
+    
 }
 
 #playlist li a {
+    margin-left: 20px;
     color:white;
     text-decoration: none;
 }
-
-#playlist .current-song a {
-    color:cornflowerblue;
+#playlist .current-song  {
+    background: #333;
 }
