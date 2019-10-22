@@ -264,10 +264,6 @@ ul.topnav li a {
   max-width: 100%;
 }
 
-.player {
-  margin: 0 auto;
-  display: block;
-}
 
 .contact {
   margin: 0 auto;
@@ -282,63 +278,15 @@ ul.topnav li a {
   color: white;
 }
 
-
-audio {
-  display:none;
-  }
- 
-  .playlistItem {
-  }
-
-  .playlist {
-    margin: 0 auto;
-    width: 80%;
-    display: block;
-    max-width: 600px;
-  }
-
-  .playlist li {
+#playlist {
     list-style: none;
-  }
-
-  .playlistTitle {
-    display: inline-block;
-    width: 80%;
-  }
-
-  .playlistNumber {
-    display: inline-block;
-    width: 25px;
-  }
-
-  .playlistLength {
-    float: right;
-  }
-
-.music h1 {
-  margin: 0 auto;
-  max-width: 100%;
-  text-align: center;
 }
 
-.playerHeader {
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: red;
-  height: 80px;
-  max-width: 600px;
+#playlist li a {
+    color:white;
+    text-decoration: none;
 }
 
-.playerHeader i {
-  padding-left: 20px;
-  padding-right: 20px;
+#playlist .current-song a {
+    color:cornflowerblue;
 }
-
-.playerNowPlaying {
-  margin: 0 auto;
-  max-width: 100%;
-  text-align: center;
-}
-

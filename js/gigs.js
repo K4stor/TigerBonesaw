@@ -1,8 +1,11 @@
 var requestURL = './json/gigs.json';
 var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-request.responseType = 'json';
-request.send();
+
+function fireRequest() {
+    request.open('GET', requestURL);
+    request.responseType = 'json';
+    request.send();
+}
 
 request.onload = function() {
   var gigs = request.response;
@@ -52,3 +55,6 @@ function createGigRow(gig, gigRootElement) {
   var hrElement = document.createElement('hr');
   gigRootElement.appendChild(hrElement);
 }
+
+document.addEventListener('DOMContentLoaded', fireRequest, false);
+
