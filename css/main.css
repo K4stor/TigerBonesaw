@@ -296,8 +296,20 @@ ul.topnav li a {
 }
 
 .player-header {
-  background: red;
+  background: #222;
   display: flex;
+}
+
+.album-title {
+  font-size: 30px;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.album-date {
+  font-size: 15px;
+  text-align: left;
+  margin-top: 20px;
 }
 
 #playlist {
