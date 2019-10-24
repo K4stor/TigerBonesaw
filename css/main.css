@@ -370,6 +370,7 @@ ul.topnav li a {
 
 .song-title {
   flex-grow: 1;
+  color:red;
 }
 
 .song-length {
