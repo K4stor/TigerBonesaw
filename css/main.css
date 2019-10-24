@@ -291,13 +291,14 @@ ul.topnav li a {
 }
 
 .playerContainer img {
-  width: 280px;
-  height: 280px;
-  margin: 20px;
+  width: 230px;
+  height: 230px;
+  margin: 20px 20px 30px 20px;
+  box-shadow: 0 0 15px #111;
 }
 
 .playlistContainer {
-  background: #111;
+  background: #222;
   width: 100%;
 }
 
@@ -306,16 +307,29 @@ ul.topnav li a {
   display: flex;
 }
 
+.player-divider {
+  height: 1px;
+  background: #444;
+  margin: 0px 20px;
+}
+
 .album-title {
   font-size: 30px;
   text-align: left;
   margin-top: 20px;
 }
 
-.album-date {
+.artist {
   font-size: 15px;
   text-align: left;
-  margin-top: 20px;
+  color: #999;
+}
+
+.album-info {
+  font-size: 12px;
+  text-align: left;
+  margin-top: 10px;
+  color: #999;
 }
 
 #playlist {
@@ -324,6 +338,7 @@ ul.topnav li a {
   list-style: none;
   margin-left: -40px;
   margin-top: 0px;
+  padding-top: 15px;
 }
 
 #playlist li {
@@ -348,6 +363,8 @@ ul.topnav li a {
 .song-length {
   flex-basis: 50px;
   text-align: right;
+  margin-right: 20px;
+  color: #999;
 }
 
 .imprint {
