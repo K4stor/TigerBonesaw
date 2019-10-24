@@ -281,17 +281,23 @@ ul.topnav li a {
 
 .playerContainer {
   width: 80%;
-  display: flex;
   margin: 0px auto;
 }
 
 .playerContainer img {
-  width: 50%;
+  width: 280px;
+  height: 280px;
+  margin: 20px;
 }
 
 .playlistContainer {
   background: #111;
-  width: 50%;
+  width: 100%;
+}
+
+.player-header {
+  background: red;
+  display: flex;
 }
 
 #playlist {
