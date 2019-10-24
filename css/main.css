@@ -346,14 +346,26 @@ ul.topnav li a {
   display: flex;
 }
 
+#playlist li:hover {
+  background: #333;
+}
+
 #playlist li a {
   margin-left: 20px;
   color: white;
   text-decoration: none;
 }
 
-#playlist .current-song {
+.current-song {
   background: #333;
+}
+
+.current-song div {
+  color: cornflowerblue;
+}
+
+.current-song a {
+  color: cornflowerblue;
 }
 
 .song-title {
