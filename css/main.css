@@ -6,14 +6,15 @@ body {
   color: white;
 }
 
-html,body {
-  width:100vw;
+html,
+body {
+  width: 100vw;
   height: 100vh;
   margin: 0;
 }
 
 #videoBG {
-  position:fixed;
+  position: fixed;
   z-index: -1;
 }
 
@@ -25,9 +26,9 @@ html,body {
 }
 
 @media (max-aspect-ratio: 16/9) {
-  #videoBG { 
-      width:auto;
-      height: 100%;
+  #videoBG {
+    width: auto;
+    height: 100%;
   }
 }
 
@@ -35,6 +36,7 @@ html,body {
   #videoBG {
     display: none;
   }
+
   body {
     background: url('../images/header.png') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -88,7 +90,7 @@ nav {
   background-color: #333;
   width: 100%;
   margin: 0;
-  display: flex; 
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -138,6 +140,7 @@ nav.fill ul li a:after {
   background: white;
   height: 3px;
 }
+
 nav.stroke ul li a:hover:after {
   width: 100%;
 }
@@ -152,10 +155,12 @@ nav.fill ul li a:after {
   margin: 0;
   opacity: 0;
 }
+
 nav.fill ul li a:hover {
   color: #fff;
   z-index: 1;
 }
+
 nav.fill ul li a:hover:after {
   z-index: -10;
   animation: fill 1s forwards;
@@ -175,7 +180,8 @@ ul.topnav li a {
   color: white;
 }
 
-.topnav-left, .topnav-right {
+.topnav-left,
+.topnav-right {
   width: 150px;
 }
 
@@ -230,7 +236,7 @@ ul.topnav li a {
 }
 
 .gig-container hr {
-  border: solid  rgb(44, 44, 53) 1px;
+  border: solid rgb(44, 44, 53) 1px;
 }
 
 .gig-container h1 {
@@ -247,13 +253,13 @@ ul.topnav li a {
 }
 
 .gig-location {
- flex-basis: 150px;
+  flex-basis: 150px;
 }
 
 .gig-link {
   flex-basis: 100px;
   text-align: center;
-  padding: 10px; 
+  padding: 10px;
   border: 1px solid white;
 }
 
@@ -327,11 +333,11 @@ ul.topnav li a {
 
 #playlist li a {
   margin-left: 20px;
-  color:white;
+  color: white;
   text-decoration: none;
 }
 
-#playlist .current-song  {
+#playlist .current-song {
   background: #333;
 }
 
