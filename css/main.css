@@ -345,6 +345,15 @@ ul.topnav li a {
   margin: 0px 15px 0px 0px;
 }
 
+.player-controls {
+  margin: auto 0px;
+}
+
+.player-controls img {
+  width: 80px;
+  height: 80px;
+}
+
 #playlist {
   font-size: 18px;
   text-align: left;

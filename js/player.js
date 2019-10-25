@@ -8,7 +8,8 @@ function configureAudioPlayer() {
     let player = document.getElementById("audio");
     let firstSong = document.querySelector("#playlist li a").href;
     player.src = firstSong;
-    
+    let controlImg = document.querySelector(".player-controls img")  
+  
     let songs = document.getElementById('playlist').children;
     for(let song of songs) {
         song.onclick = function(e) {
@@ -16,15 +17,18 @@ function configureAudioPlayer() {
             let clickedIndex = indexOf(song);
             if (clickedIndex != currentSong) {
               player.src = song.children[0].children[0].href;
-              //player.play();
+              player.play();
+              controlImg.src = "images/pause.png"
               songs[currentSong].classList.remove("current-song");
               currentSong = clickedIndex;
               songs[currentSong].classList.add("current-song");
             } else {
               if (player.paused) {
-                //player.play();
+                controlImg.src = "images/pause.png"
+                player.play();
               } else {
-                //player.pause();
+                controlImg.src = "images/play.png"
+                player.pause();
               }
             }
         }   
