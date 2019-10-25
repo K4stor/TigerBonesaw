@@ -406,5 +406,5 @@ ul.topnav li a {
 }
 
 #audio {
-  padding: 50px;
+  visibility: hidden;
 }

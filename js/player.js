@@ -13,11 +13,20 @@ function configureAudioPlayer() {
     for(let song of songs) {
         song.onclick = function(e) {
             e.preventDefault();
-            player.src = song.children[0].children[0].href;
-        //    player.play();
-            songs[currentSong].classList.remove("current-song");
-            currentSong = indexOf(song);
-            songs[currentSong].classList.add("current-song");
+            let clickedIndex = indexOf(song);
+            if (clickedIndex != currentSong) {
+              player.src = song.children[0].children[0].href;
+              //player.play();
+              songs[currentSong].classList.remove("current-song");
+              currentSong = clickedIndex;
+              songs[currentSong].classList.add("current-song");
+            } else {
+              if (player.paused) {
+                //player.play();
+              } else {
+                //player.pause();
+              }
+            }
         }   
     }
 }
