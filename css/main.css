@@ -332,6 +332,16 @@ ul.topnav li a {
   color: #999;
 }
 
+.streaming-buttons {
+  margin: 15px 0px;
+}
+
+.streaming-buttons img {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+
 #playlist {
   font-size: 18px;
   text-align: left;
