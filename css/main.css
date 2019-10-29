@@ -346,7 +346,7 @@ ul.topnav li a {
 }
 
 .player-controls {
-  margin: auto 0px;
+  margin: auto auto;
 }
 
 .player-controls img {
