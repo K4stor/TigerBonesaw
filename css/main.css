@@ -421,3 +421,38 @@ ul.topnav li a {
 #audio {
   visibility: hidden;
 }
+
+.cta {
+    text-align: center;
+    margin: 20px;
+}
+
+.cta a {
+    text-decoration: none;
+    display: inline-block;
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.video-container img {
+  margin: 0 auto;
+  display: block;
+  width: 100%;
+  max-width: 900px;
+}
+
+.video-container {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin: 0 auto;
+  max-width: 1200px;
+  font-size: 20px;
+}
+
+.video-container h1 {
+  display: flex;
+  justify-content: center;
+}
+
