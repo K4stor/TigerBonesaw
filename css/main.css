@@ -248,6 +248,10 @@ ul.topnav li a {
   flex-basis: 120px;
 }
 
+.gig-past {
+  color:#999;
+}
+
 .gig-title {
   flex-grow: 1;
 }
