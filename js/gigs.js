@@ -24,40 +24,45 @@ request.onload = function () {
 }
 
 function createGigElements(gigs) {
-  var gigRootElement = document.getElementById('gigRoot');
+  let upcomingElment = document.getElementById('upcoming-gigs');
+  let pastElment = document.getElementById('past-gigs');
+  let today = new Date(); 
 
+  // upcoming gigs
   gigs.forEach(gig => {
-    createGigRow(gig, gigRootElement);
+    let date = new Date(Date.parse(gig.date));
+    let isInPast = date < today;
+    if (!isInPast) {
+      createGigRow(gig, upcomingElment, "");
+    }
+  });
+
+  // past shows
+  gigs.forEach(gig => {
+    let date = new Date(Date.parse(gig.date));
+    let isInPast = date < today;
+    if (isInPast) {
+      createGigRow(gig, pastElment, " gig-past");
+    }
   });
 }
 
-function createGigRow(gig, gigRootElement) {
-  var gigRowElement = document.createElement('div');
+function createGigRow(gig, gigRootElement, classModifier) {
+  let gigRowElement = document.createElement('div');
+  
   gigRowElement.className = "gig-row";
 
-  let today = new Date();
   let date = new Date(Date.parse(gig.date));
-  let isInPast = date < today;
-
   var dateElement = document.createElement('div');
-  dateElement.className = "gig-date";
-  if (isInPast) {
-    dateElement.className += " gig-past";
-  }
+  dateElement.className = "gig-date" + classModifier;
   dateElement.textContent = date.ddmmyyyy();
 
   var titleElement = document.createElement('div');
-  titleElement.className = "gig-title";
-  if (isInPast) {
-    titleElement.className += " gig-past";
-  }
+  titleElement.className = "gig-title" + classModifier;
   titleElement.textContent = gig.title;
 
   var locationElement = document.createElement('div');
-  locationElement.className = "gig-location";
-  if (isInPast) {
-    locationElement.className += " gig-past";
-  }
+  locationElement.className = "gig-location" + classModifier;
   locationElement.textContent = gig.location;
 
   var linkElement = document.createElement('a');
@@ -66,10 +71,7 @@ function createGigRow(gig, gigRootElement) {
   linkElement.target = "_blank";
 
   var linkButtonElement = document.createElement('div');
-  linkButtonElement.className = "gig-link";
-  if (isInPast) {
-    linkButtonElement.className += " gig-past";
-  }
+  linkButtonElement.className = "gig-link" + classModifier;
   linkButtonElement.appendChild(linkElement);
 
   gigRowElement.appendChild(dateElement);
