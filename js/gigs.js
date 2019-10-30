@@ -2,23 +2,23 @@ var requestURL = './json/gigs.json';
 var request = new XMLHttpRequest();
 
 //Creating a Prototype 
-Date.prototype.ddmmyyyy = function() {
-   //Grab each of your components
-   var yyyy = this.getFullYear().toString();
-   var MM = (this.getMonth()+1).toString();
-   var dd  = this.getDate().toString();
+Date.prototype.ddmmyyyy = function () {
+  //Grab each of your components
+  var yyyy = this.getFullYear().toString();
+  var MM = (this.getMonth() + 1).toString();
+  var dd = this.getDate().toString();
 
-   //Returns your formatted result
-  return (dd[1]?dd:"0"+dd[0]) + '.' + (MM[1]?MM:"0"+MM[0]) + '.' + yyyy;
+  //Returns your formatted result
+  return (dd[1] ? dd : "0" + dd[0]) + '.' + (MM[1] ? MM : "0" + MM[0]) + '.' + yyyy;
 };
 
 function fireRequest() {
-    request.open('GET', requestURL);
-    request.responseType = 'json';
-    request.send();
+  request.open('GET', requestURL);
+  request.responseType = 'json';
+  request.send();
 }
 
-request.onload = function() {
+request.onload = function () {
   var gigs = request.response;
   createGigElements(gigs);
 }
@@ -84,4 +84,3 @@ function createGigRow(gig, gigRootElement) {
 }
 
 document.addEventListener('DOMContentLoaded', fireRequest, false);
-
