@@ -231,6 +231,10 @@ ul.topnav li a {
   font-size: 20px;
 }
 
+#upcoming-gigs {
+  padding-bottom: 30px;
+}
+
 .gig-row {
   display: flex;
   align-items: center;
