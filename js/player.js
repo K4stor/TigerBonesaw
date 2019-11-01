@@ -31,6 +31,33 @@ function configureAudioPlayer() {
   playButton.onclick = function (e) {
     togglePlayState(player, playButton);
   }
+  
+  let nextButton = document.querySelector("#next-button");
+  nextButton.onclick = function(e) {
+      songs[currentSong].classList.remove("current-song");
+      currentSong = (currentSong + 1) % 13;
+      songs[currentSong].classList.add("current-song");
+      player.src = songs[currentSong].children[0].children[0].href;
+    
+    if (player.paused) {
+      togglePlayState(player, playButton);
+      player.play();
+    }    
+  }
+
+  let prevButton = document.querySelector("#prev-button");
+  prevButton.onclick = function(e) {
+      songs[currentSong].classList.remove("current-song");
+      currentSong = (currentSong - 1);
+      currentSong = currentSong < 0 ? currentSong = 12 : currentSong;
+      songs[currentSong].classList.add("current-song");
+      player.src = songs[currentSong].children[0].children[0].href;
+    
+    if (player.paused) {
+      togglePlayState(player, playButton);
+      player.play();
+    }    
+  }
 }
 
 function togglePlayState(player, playButton) {
