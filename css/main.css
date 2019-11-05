@@ -365,6 +365,7 @@ ul.topnav li a {
   display: flex;
 }
 
+
 .player-divider {
   height: 1px;
   background: #444;
@@ -458,6 +459,32 @@ ul.topnav li a {
   color: #999;
 }
 
+@media (max-width: 400px) {
+  .player-header {
+    display: block;
+  }
+  .album-title {
+    margin-top: 0px;
+    text-align: center;
+  }
+  .artist {
+    text-align: center;
+  }
+  .album-info {
+    text-align: center;
+  }
+  .player-controls {
+    padding-bottom: 30px;
+  }
+  
+  .player-controls img {
+    width: 60px;
+    height: 60px;
+  }
+
+}
+
+
 .imprint {
   margin: 0 auto;
   max-width: 100%;
@@ -506,4 +533,8 @@ ul.topnav li a {
 .video-container h1 {
   display: flex;
   justify-content: center;
+}
+
+.video-spacer {
+  height: 20px;
 }
