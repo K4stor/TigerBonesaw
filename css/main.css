@@ -459,7 +459,7 @@ ul.topnav li a {
   color: #999;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 830px) {
   .player-header {
     display: block;
   }
