@@ -236,6 +236,13 @@ ul.topnav li a {
   padding-right: 50px;
 }
 
+@media (max-width: 400px) {
+  .band-image-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
 .gig-container {
   padding-left: 50px;
   padding-right: 50px;
@@ -254,6 +261,14 @@ ul.topnav li a {
   justify-content: center;
   padding-bottom: 25px;
   padding-top: 25px;
+}
+
+@media (max-width: 400px) {
+  .gig-row {
+    display: block;
+    text-align: center;
+    line-height: 40px;
+  }
 }
 
 .gig-container hr {
@@ -295,6 +310,12 @@ ul.topnav li a {
 
 .section-spacer {
   height: 150px;
+}
+
+@media (max-width: 400px) {
+  .section-spacer {
+    height: 70px;
+  }
 }
 
 .contact {
