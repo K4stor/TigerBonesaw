@@ -47,12 +47,22 @@ function createGigElements(gigs) {
   });
 }
 
+function parseDate(input, format) {
+  format = format || 'yyyy-mm-dd'; // default format
+  var parts = input.match(/(\d+)/g), 
+      i = 0, fmt = {};
+  // extract date-part indexes from the format
+  format.replace(/(yyyy|dd|mm)/g, function(part) { fmt[part] = i++; });
+
+  return new Date(parts[fmt['yyyy']], parts[fmt['mm']]-1, parts[fmt['dd']]);
+}
+
 function createGigRow(gig, gigRootElement, classModifier) {
   let gigRowElement = document.createElement('div');
   
   gigRowElement.className = "gig-row";
 
-  let date = new Date(Date.parse(gig.date));
+  let date = new parseDate(gig.date, 'mm.dd.yyyy');
   var dateElement = document.createElement('div');
   dateElement.className = "gig-date" + classModifier;
   dateElement.textContent = date.ddmmyyyy();
