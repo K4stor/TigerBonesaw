@@ -210,7 +210,7 @@ ul.topnav li a {
   width: 150px;
 }
 
-.topnav-right i {
+.topnav-right img {
   padding-left: 10px;
 }
 
@@ -394,8 +394,7 @@ h2 {
   color: white;
 }
 
-.contact a i {
-  font-size: 40px;
+.contact a img {
   margin: 50px 20px 0px 20px;
 }
 
@@ -545,9 +544,7 @@ h2 {
     width: 60px;
     height: 60px;
   }
-
 }
-
 
 .imprint {
   margin: 0 auto;
