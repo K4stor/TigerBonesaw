@@ -48,7 +48,7 @@ body {
   }
 
   body {
-    background: url('/images/header.png') no-repeat center center fixed;
+    background: url('../images/header.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -503,7 +503,7 @@ h2 {
 }
 
 .current-song a {
-  color: cornflowerblue;
+  color: cornflowerblue !important;
 }
 
 .song-title {
