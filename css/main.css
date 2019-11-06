@@ -211,6 +211,55 @@ ul.topnav li a {
   text-decoration: none;
 }
 
+#toggle {
+  display: none;
+}
+
+label {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .topnav-left,
+  .topnav-right {
+    width: 0px;
+  }
+  
+  ul.topnav li {
+    background: #333;
+    width: 100%;
+    display: none;
+  }
+  
+  nav {
+    display: block;
+    height: 47px;
+  }
+  
+  nav ul {
+    display: block;
+  }
+
+  label {
+    display: block;
+    cursor: pointer;
+    text-align: center;
+    font-size: 28px;
+  }
+  
+  .topnav-right {
+    display: none;
+  }
+  
+  #toggle:checked + ul.topnav li  {
+    display: block;
+  }
+  
+  nav.stroke ul li a {
+    display: none;
+  }
+}
+
 .info-container {
   display: flex;
   justify-content: center;
