@@ -1,5 +1,17 @@
 [
   {
+    "date": "7.3.2020",
+    "title": "Alles ist gut",
+    "location": "Paderborn",
+    "url": "https://allesistgut-pb.de/"
+  },
+  {
+    "date": "6.20.2020",
+    "title": "Bikertreff beim MC Lippetal",
+    "location": "Lippetal",
+    "url": "http://www.mc-lippetal.de/"
+  },
+  {
     "date": "12.6.2019",
     "title": "Rare Guitar - VUG, Stonerhead, Tiger Bonesaw",
     "location": "Münster",
@@ -14,7 +26,7 @@
   {
     "date": "6.21.2019",
     "title": "Bikertreff",
-    "location": "Roland",
+    "location": "Roland  ",
     "url": ""
   },
   {
