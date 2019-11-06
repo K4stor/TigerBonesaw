@@ -19,10 +19,12 @@ body {
 }
 
 @media (max-width: 400px) {
+html,
+body {
   max-width: 100%;
   overflow-x: hidden;
 }
-
+}
 #videoBG {
   position: fixed;
   z-index: -1;
@@ -53,12 +55,6 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
-}
-
-@media (max-width: 400px) {
-  body {
-    background: #333;
   }
 }
 
