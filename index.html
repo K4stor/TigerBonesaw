@@ -9,10 +9,12 @@
   <script src="https://kit.fontawesome.com/ad8e67bcb6.js"></script>
   <link href="css/main.css" rel="stylesheet">
 
-  <script src="js/smooth-scroll.polyfills.min.js"></script>
   <script src="js/stickyfill.min.js"></script>
   <script src="js/gigs.js"></script>
   <script src="js/player.js"></script>
+  <script src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+  <script src="https://unpkg.com/smoothscroll-anchor-polyfill"></script>
+
   <title>Tiger Bonesaw - official website</title>
 </head>
 
@@ -36,7 +38,7 @@
           <li><a href="#about"> ABOUT </a></li>
           <li><a href="#music"> MUSIC </a></li>
           <li><a href="#video"> VIDEO </a></li>
-          <li><a href="#gigRoot"> GIGS </a></li>
+          <li><a href="#gigs"> GIGS </a></li>
           <li><a href="#contact"> CONTACT </a></li>
         </ul>
         <div class="topnav-right">
@@ -50,8 +52,8 @@
       </nav>
     </div>
 
-    <div class="section-spacer"></div>
-    <div class="info-container" id="about">
+    <div class="section-spacer" id="about"></div>
+    <div class="info-container" >
       <div class="info">
         <h1>ABOUT</h1>
         <p>
@@ -79,9 +81,9 @@
     <div class="band-image-container">
       <img src="images/band.jpg" class="band-image">
     </div>
-    <div class="section-spacer"></div>
+    <div class="section-spacer" id="gigs"></div>
 
-    <div class="gig-container" id="gigRoot">
+    <div class="gig-container">
       <h1>GIGS</h1>
       <h2>UPCOMING</h2>
       <div id="upcoming-gigs"></div>
@@ -89,9 +91,9 @@
       <div id="past-gigs"></div>
     </div>
 
-    <div class="section-spacer"></div>
+    <div class="section-spacer" id="video"></div>
 
-    <div class="video-container" id="video">
+    <div class="video-container">
       <h1>VIDEO</h1>
       <a href="https://www.youtube.com/watch?v=PYiHBbPeqKM" target="_blank">
         <img src="images/thumbnailMean.png">
@@ -112,9 +114,9 @@
       </div>
     </div>
 
-    <div class="section-spacer"></div>
+    <div class="section-spacer" id="music"></div>
 
-    <div class="music" id="music">
+    <div class="music" >
       <h1>MUSIC</h1>
       <audio id="audio" type="audio/mpeg" controls></audio><br>
       <div class="playerContainer">
@@ -242,14 +244,6 @@
   </div>
 
   <script>
-    // Adding smooth scroll script
-    var scroll = new SmoothScroll('a[href*="#"]', {
-      offset: function(anchor, toggle) {
-        return 80;
-      },
-      easing: 'easeInOutCubic', // Easing pattern to use
-      speed: 300
-    });
     var elements = document.querySelectorAll('.sticky');
     Stickyfill.add(elements);
   </script>

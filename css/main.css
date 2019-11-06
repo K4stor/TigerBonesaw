@@ -1,3 +1,8 @@
+html {
+  --scroll-behavior: smooth;
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -11,6 +16,9 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
+}
+
+@media (max-width: 400px) {
   max-width: 100%;
   overflow-x: hidden;
 }
@@ -220,22 +228,23 @@ label {
 }
 
 @media (max-width: 600px) {
+
   .topnav-left,
   .topnav-right {
     width: 0px;
   }
-  
+
   ul.topnav li {
     background: #333;
     width: 100%;
     display: none;
   }
-  
+
   nav {
     display: block;
     height: 47px;
   }
-  
+
   nav ul {
     display: block;
   }
@@ -246,17 +255,13 @@ label {
     text-align: center;
     font-size: 28px;
   }
-  
+
   .topnav-right {
     display: none;
   }
-  
-  #toggle:checked + ul.topnav li  {
+
+  #toggle:checked + ul.topnav li {
     display: block;
-  }
-  
-  nav.stroke ul li a {
-    display: none;
   }
 }
 
@@ -324,7 +329,8 @@ label {
   border: solid rgb(44, 44, 53) 1px;
 }
 
-.gig-container h1, h2 {
+.gig-container h1,
+h2 {
   display: flex;
   justify-content: center;
 }
@@ -512,20 +518,24 @@ label {
   .player-header {
     display: block;
   }
+
   .album-title {
     margin-top: 0px;
     text-align: center;
   }
+
   .artist {
     text-align: center;
   }
+
   .album-info {
     text-align: center;
   }
+
   .player-controls {
     padding-bottom: 30px;
   }
-  
+
   .player-controls img {
     width: 60px;
     height: 60px;
