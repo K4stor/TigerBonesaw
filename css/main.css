@@ -3,6 +3,14 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (max-width: 500px) {
+  html {
+    --scroll-behavior: auto;
+    scroll-behavior: auto;
+  }
+}
+
+
 body {
   font-family: "Oswald", sans-serif;
   font-style: normal;
@@ -18,13 +26,16 @@ body {
   margin: 0;
 }
 
-@media (max-width: 400px) {
-html,
-body {
-  max-width: 100%;
-  overflow-x: hidden;
+/*
+@media (max-width: 500px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 }
-}
+*/
+
 #videoBG {
   position: fixed;
   z-index: -1;
@@ -95,14 +106,14 @@ h2 {
   display: block;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .top-spacer {
     height: 70vh;
   }
 
   .top-spacer img {
-    width: 90%;
-    height: auto;
+    width: auto;
+    height: 60vh;
   }
 }
 
@@ -292,7 +303,7 @@ label {
   padding-right: 50px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .band-image-container {
     padding-left: 10px;
     padding-right: 10px;
@@ -377,7 +388,7 @@ h2 {
   height: 150px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .section-spacer {
     height: 70px;
   }
