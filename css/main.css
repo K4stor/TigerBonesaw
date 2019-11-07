@@ -26,16 +26,6 @@ body {
   margin: 0;
 }
 
-/*
-@media (max-width: 500px) {
-  html,
-  body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
-}
-*/
-
 #videoBG {
   position: fixed;
   z-index: -1;
