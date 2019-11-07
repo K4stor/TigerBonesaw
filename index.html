@@ -26,8 +26,8 @@
 
 
   <video id="videoBG" poster="images/band.jpg" autoplay muted loop>
-    <source src="video/tbsPage.webm" type="video/webm">
-    <source src="video/tbsPage.mp4" type="video/mp4">
+    <source data-src="video/tbsPage.webm" type="video/webm">
+    <source data-src="video/tbsPage.mp4" type="video/mp4">
   </video>
 
   <div class="top-spacer">
@@ -258,5 +258,27 @@
   <script>
     var elements = document.querySelectorAll('.sticky');
     Stickyfill.add(elements);
+
+    function isMobileDevice() {
+      return navigator.userAgent.match(/Android/i)
+      || navigator.userAgent.match(/webOS/i)
+      || navigator.userAgent.match(/iPhone/i)
+      || navigator.userAgent.match(/iPad/i)
+      || navigator.userAgent.match(/iPod/i)
+      || navigator.userAgent.match(/BlackBerry/i)
+      || navigator.userAgent.match(/Windows Phone/i);
+    };  
+
+    if(!isMobileDevice()) {
+      var sources = document.querySelectorAll('video#videoBG source');
+      // Define the video object this source is contained inside
+      var video = document.querySelector('video#videoBG');
+      for(var i = 0; i<sources.length;i++) {
+        sources[i].setAttribute('src', sources[i].getAttribute('data-src'));
+      }
+      // If for some reason we do want to load the video after, for desktop as opposed to mobile (I'd imagine), use videojs API to load
+      video.load(); 
+    }
+
   </script>
 </body></html>
