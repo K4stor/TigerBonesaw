@@ -505,6 +505,7 @@ h2 {
   margin-left: 20px;
   color: white;
   text-decoration: none;
+  text-align: left;
 }
 
 .current-song {
@@ -556,6 +557,13 @@ h2 {
   .player-controls img {
     width: 60px;
     height: 60px;
+  }
+  
+}
+
+@media (max-width: 500px) {
+  #playlist li a {
+    margin-left: 0px;
   }
 }
 
