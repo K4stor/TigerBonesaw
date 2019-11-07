@@ -260,13 +260,7 @@
     Stickyfill.add(elements);
 
     function isMobileDevice() {
-      return navigator.userAgent.match(/Android/i)
-      || navigator.userAgent.match(/webOS/i)
-      || navigator.userAgent.match(/iPhone/i)
-      || navigator.userAgent.match(/iPad/i)
-      || navigator.userAgent.match(/iPod/i)
-      || navigator.userAgent.match(/BlackBerry/i)
-      || navigator.userAgent.match(/Windows Phone/i);
+      return navigator.userAgent.match(/Android/i) != null || navigator.userAgent.match(/webOS/i) != null || navigator.userAgent.match(/iPhone/i) != null || navigator.userAgent.match(/iPad/i) != null || navigator.userAgent.match(/iPod/i) != null || navigator.userAgent.match(/BlackBerry/i) != null || navigator.userAgent.match(/Windows Phone/i) != null;
     };  
 
     if(!isMobileDevice()) {
@@ -279,6 +273,8 @@
       // If for some reason we do want to load the video after, for desktop as opposed to mobile (I'd imagine), use videojs API to load
       video.load(); 
     }
+
+    alert( isMobileDevice());
 
   </script>
 </body></html>
