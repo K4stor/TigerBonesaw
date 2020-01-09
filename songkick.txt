@@ -1,0 +1,2 @@
+<a href="https://www.songkick.com/artists/10100128" class="songkick-widget" data-theme="dark" data-detect-style="true" data-background-color="transparent" data-locale="en">Gigs</a>
+<script src="//widget.songkick.com/10100128/widget.js"></script>
