@@ -1,4 +1,4 @@
-var requestURL = './json/gigs.json';
+var requestURL = 'https://api.songkick.com/api/3.0/artists/10100128/calendar.json?apikey=j5SN1UpQtOo8yH7m';
 var request = new XMLHttpRequest();
 
 //Creating a Prototype 
@@ -19,32 +19,28 @@ function fireRequest() {
 }
 
 request.onload = function () {
-  var gigs = request.response;
-  createGigElements(gigs);
+  var results = request.response.resultsPage.results.event;
+  createGigElements(results);
 }
 
-function createGigElements(gigs) {
+function createGigElements(results) {
   let upcomingElment = document.getElementById('upcoming-gigs');
   let pastElment = document.getElementById('past-gigs');
   let today = new Date(); 
-
+  
   // upcoming gigs
-  gigs.forEach(gig => {
-    let date = new Date(Date.parse(gig.date));
-    let isInPast = date < today;
-    if (!isInPast) {
-      createGigRow(gig, upcomingElment, "");
-    }
+  results.forEach(gig => {
+    createGigRow(gig, upcomingElment, "");
   });
 
   // past shows
-  gigs.forEach(gig => {
-    let date = new Date(Date.parse(gig.date));
-    let isInPast = date < today;
-    if (isInPast) {
-      createGigRow(gig, pastElment, " gig-past");
-    }
-  });
+  // gigs.forEach(gig => {
+  //   let date = new Date(Date.parse(gig.date));
+  //   let isInPast = date < today;
+  //   if (isInPast) {
+  //     createGigRow(gig, pastElment, " gig-past");
+  //   }
+  // });
 }
 
 function parseDate(input, format) {
@@ -62,22 +58,37 @@ function createGigRow(gig, gigRootElement, classModifier) {
   
   gigRowElement.className = "gig-row";
 
-  let date = new parseDate(gig.date, 'mm.dd.yyyy');
+  let date =new Date(Date.parse(gig.start.date));
   var dateElement = document.createElement('div');
   dateElement.className = "gig-date" + classModifier;
   dateElement.textContent = date.ddmmyyyy();
 
+  var title = gig.venue.displayName
+  var firstArtist = true
+  gig.performance.forEach(performance => {
+    let artist = performance.artist.displayName
+    if (artist != "Tiger Bonesaw") {
+      if (firstArtist) {
+        title = title + " with " + artist;
+        firstArtist = false
+      } else {
+        title = title + " + " + artist;
+      }
+    }
+  });
+
   var titleElement = document.createElement('div');
   titleElement.className = "gig-title" + classModifier;
-  titleElement.textContent = gig.title;
+  titleElement.textContent = title;
+
 
   var locationElement = document.createElement('div');
   locationElement.className = "gig-location" + classModifier;
-  locationElement.textContent = gig.location;
+  locationElement.textContent = gig.venue.metroArea.displayName;
 
   var linkElement = document.createElement('a');
   linkElement.textContent = "Visit";
-  linkElement.href = gig.url;
+  linkElement.href = gig.uri;
   linkElement.target = "_blank";
 
   var linkButtonElement = document.createElement('div');
