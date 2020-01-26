@@ -1,5 +1,7 @@
-var requestURL = 'https://api.songkick.com/api/3.0/artists/10100128/calendar.json?apikey=j5SN1UpQtOo8yH7m';
-var request = new XMLHttpRequest();
+var upcomingGigRequestURL = 'https://api.songkick.com/api/3.0/artists/10100128/calendar.json?apikey=j5SN1UpQtOo8yH7m';
+var upcomingGigRequest = new XMLHttpRequest();
+var pastGigRequestURL = 'https://api.songkick.com/api/3.0/artists/10100128/gigography.json?apikey=j5SN1UpQtOo8yH7m';
+var pastGigRequest = new XMLHttpRequest();
 
 //Creating a Prototype 
 Date.prototype.ddmmyyyy = function () {
@@ -12,35 +14,34 @@ Date.prototype.ddmmyyyy = function () {
   return (dd[1] ? dd : "0" + dd[0]) + '.' + (MM[1] ? MM : "0" + MM[0]) + '.' + yyyy;
 };
 
-function fireRequest() {
-  request.open('GET', requestURL);
-  request.responseType = 'json';
-  request.send();
+function fireUpcomingGigsRequest() {
+  upcomingGigRequest.open('GET', upcomingGigRequestURL);
+  upcomingGigRequest.responseType = 'json';
+  upcomingGigRequest.send();
 }
 
-request.onload = function () {
-  var results = request.response.resultsPage.results.event;
-  createGigElements(results);
+upcomingGigRequest.onload = function () {
+  var results = upcomingGigRequest.response.resultsPage.results.event;
+  let element = document.getElementById('upcoming-gigs');
+  createGigElements(results, element, "");
 }
 
-function createGigElements(results) {
-  let upcomingElment = document.getElementById('upcoming-gigs');
-  let pastElment = document.getElementById('past-gigs');
-  let today = new Date(); 
-  
-  // upcoming gigs
+function firePastGigsRequest() {
+  pastGigRequest.open('GET', pastGigRequestURL);
+  pastGigRequest.responseType = 'json';
+  pastGigRequest.send();
+}
+
+pastGigRequest.onload = function () {
+  var results = pastGigRequest.response.resultsPage.results.event;
+  let element = document.getElementById('past-gigs');
+  createGigElements(results, element, " gig-past");
+}
+
+function createGigElements(results, element, modifier) {
   results.forEach(gig => {
-    createGigRow(gig, upcomingElment, "");
+    createGigRow(gig, element, modifier);
   });
-
-  // past shows
-  // gigs.forEach(gig => {
-  //   let date = new Date(Date.parse(gig.date));
-  //   let isInPast = date < today;
-  //   if (isInPast) {
-  //     createGigRow(gig, pastElment, " gig-past");
-  //   }
-  // });
 }
 
 function parseDate(input, format) {
@@ -106,4 +107,5 @@ function createGigRow(gig, gigRootElement, classModifier) {
   gigRootElement.appendChild(hrElement);
 }
 
-document.addEventListener('DOMContentLoaded', fireRequest, false);
+document.addEventListener('DOMContentLoaded', fireUpcomingGigsRequest, false);
+document.addEventListener('DOMContentLoaded', firePastGigsRequest, false);

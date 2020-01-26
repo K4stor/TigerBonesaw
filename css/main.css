@@ -318,6 +318,15 @@ label {
   padding-bottom: 30px;
 }
 
+#songkick {
+  margin-top: 30px;
+  text-align: right;
+}
+
+#songkick img {  
+  width: 80px;
+}
+
 .gig-row {
   display: flex;
   align-items: center;
