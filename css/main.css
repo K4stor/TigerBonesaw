@@ -365,6 +365,42 @@ h2 {
   flex-grow: 1;
 }
 
+.gig-canceled {
+  flex-grow: 1;
+}
+
+.gig-canceled-badge {
+  background-color: #f80046;
+  border-radius: 3px;
+  border-style:none;
+  border-width:0px;
+  padding-left: 5px;
+  padding-right: 5px;
+  float: right;
+  margin-right: 20px;
+}
+
+
+@media (max-width: 600px) {
+  .gig-canceled-badge {
+    display: inline;
+    float: none;
+    margin-right: 0px;
+  }
+}
+
+
+/* .gig-canceled-badge {
+  background-color: #f80046;
+  border-radius: 3px;
+  border-style:none;
+  border-width:0px;
+  display: inline;
+  padding-left: 5px;
+  padding-right: 5px;
+} */
+
+
 .gig-location {
   flex-basis: 150px;
 }

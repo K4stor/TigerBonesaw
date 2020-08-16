@@ -66,6 +66,7 @@ function createGigRow(gig, gigRootElement, classModifier) {
 
   var title = gig.venue.displayName
   var firstArtist = true
+  let cancelled = gig.status === "cancelled"
   gig.performance.forEach(performance => {
     let artist = performance.artist.displayName
     if (artist != "Tiger Bonesaw") {
@@ -82,6 +83,13 @@ function createGigRow(gig, gigRootElement, classModifier) {
   titleElement.className = "gig-title" + classModifier;
   titleElement.textContent = title;
 
+  var canceledElement = document.createElement('div');
+  canceledElement.className = "gig-canceled";
+
+  var canceledBadgeElement = document.createElement('div');
+  canceledBadgeElement.className = "gig-canceled-badge";
+  canceledBadgeElement.textContent = "CANCELED";
+  canceledElement.appendChild(canceledBadgeElement)
 
   var locationElement = document.createElement('div');
   locationElement.className = "gig-location" + classModifier;
@@ -98,6 +106,9 @@ function createGigRow(gig, gigRootElement, classModifier) {
 
   gigRowElement.appendChild(dateElement);
   gigRowElement.appendChild(titleElement);
+  if (cancelled) {
+    gigRowElement.appendChild(canceledElement);
+  }
   gigRowElement.appendChild(locationElement);
   gigRowElement.appendChild(linkButtonElement);
 
